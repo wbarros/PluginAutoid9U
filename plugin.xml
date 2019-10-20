@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-autoid"
+    version="0.0.1">
+   <name>PluginAutoid9U</name>
+   <js-module  src="www/plugin.js" name="plugin">
+      <clobbers target="PluginAutoid9U" />
+   </js-module>
+   <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+         <feature name="PluginAutoid9U">
+            <param name="android-package" value="com.seidor.uhfrfid.PluginAutoid9U" />
+         </feature>
+      </config-file>
+
+      <config-file target="AndroidManifest.xml" parent="/*" />
+
+      <source-file src="src/android/com/seidor/uhfrfid/PluginAutoid9U.java" target-dir="src/com/seidor/uhfrfid/" />
+      <source-file src="src/android/com/seidor/uhfrfid/InventoryFragement.java" target-dir="src/com/seidor/uhfrfid/" />
+      <source-file src="src/android/com/seidor/uhfrfid/BaseUtil.java" target-dir="src/com/seidor/uhfrfid/" />
+      <source-file src="src/android/uhf.jar" target-dir="libs" />
+      <lib-file src="src/android/uhf.jar" />
+   </platform>
+</plugin>
